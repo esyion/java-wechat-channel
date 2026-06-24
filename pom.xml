@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.esyion</groupId>
-    <artifactId>wechat-channel</artifactId>
+    <artifactId>java-wechat-channel</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
 
