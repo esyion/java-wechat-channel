@@ -11,7 +11,7 @@
 
     <name>WeChat Channel</name>
     <description>Agent-agnostic WeChat ilink channel library for Java</description>
-    <url>https://github.com/esyion/wechat-channel-java</url>
+    <url>https://github.com/esyion/java-wechat-channel</url>
 
     <licenses>
         <license>
@@ -27,8 +27,8 @@
     </developers>
 
     <scm>
-        <url>https://github.com/esyion/wechat-channel-java</url>
-        <connection>scm:git:https://github.com/esyion/wechat-channel-java.git</connection>
+        <url>https://github.com/esyion/java-wechat-channel</url>
+        <connection>scm:git:https://github.com/esyion/java-wechat-channel.git</connection>
     </scm>
 
     <properties>
