@@ -131,7 +131,8 @@ public class Inbound {
 
     private static String sanitizeUserId(String id) {
         if (id == null) return "unknown";
-        String sanitized = id.replaceAll("[^a-zA-Z0-9_@.\-]", "_");
+        // 在字符类中，连字符放在最后一位就不需要转义
+        String sanitized = id.replaceAll("[^a-zA-Z0-9_@.]", "_");
         return sanitized.length() > 64 ? sanitized.substring(0, 64) : sanitized;
     }
 }

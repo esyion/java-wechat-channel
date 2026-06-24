@@ -3,6 +3,7 @@ package com.esyion.wechat.channel;
 import com.esyion.wechat.error.WechatApiError;
 import com.esyion.wechat.store.Store;
 import com.esyion.wechat.wechat.WechatApiClient;
+import com.esyion.wechat.wechat.WechatTypes;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
@@ -164,54 +165,5 @@ public class LongPoll {
 
             replyExecutor.shutdown();
         });
-    }
-
-    private static class WechatTypes {
-        static class GetUpdatesResp {
-            Integer ret;
-            Integer errcode;
-            String errmsg;
-            java.util.List<WeixinMessage> msgs;
-            String getUpdatesBuf;
-            Long longpollingTimeoutMs;
-        }
-
-        static class WeixinMessage {
-            String fromUserId;
-            String contextToken;
-            java.util.List<MessageItem> itemList;
-        }
-
-        static class MessageItem {
-            Integer type;
-            TextItem textItem;
-            ImageItem imageItem;
-            FileItem fileItem;
-            VideoItem videoItem;
-            VoiceItem voiceItem;
-        }
-
-        static class TextItem { String text; }
-        static class ImageItem {
-            String aeskey;
-            CdnMedia media;
-            String url;
-        }
-        static class FileItem {
-            String fileName;
-            CdnMedia media;
-        }
-        static class VideoItem {
-            CdnMedia media;
-        }
-        static class VoiceItem {
-            CdnMedia media;
-            String text;
-        }
-        static class CdnMedia {
-            String encryptQueryParam;
-            String aesKey;
-            String fullUrl;
-        }
     }
 }

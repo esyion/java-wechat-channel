@@ -164,7 +164,7 @@ public class Outbound {
             }
 
             chunks.add(remaining.substring(0, cut));
-            remaining = remaining.substring(cut).trimStart();
+            remaining = remaining.substring(cut).replaceFirst("^\\s+", "");
         }
 
         return chunks;

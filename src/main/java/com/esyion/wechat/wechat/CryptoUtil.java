@@ -113,7 +113,7 @@ public class CryptoUtil {
         return buf;
     }
 
-    private static String bytesToHex(byte[] bytes) {
+    static String bytesToHex(byte[] bytes) {
         StringBuilder sb = new StringBuilder();
         for (byte b : bytes) {
             sb.append(String.format("%02x", b));
@@ -121,7 +121,7 @@ public class CryptoUtil {
         return sb.toString();
     }
 
-    private static byte[] hexStringToBytes(String hex) {
+    static byte[] hexStringToBytes(String hex) {
         int len = hex.length();
         byte[] data = new byte[len / 2];
         for (int i = 0; i < len; i += 2) {
